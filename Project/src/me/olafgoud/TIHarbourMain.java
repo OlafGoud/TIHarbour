@@ -1,15 +1,17 @@
 package me.olafgoud;
 
+import java.io.File;
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import me.olafgoud.utils.ReadInputFile;
 import me.olafgoud.utils.screen.ScreenTransform;
 
 public class TIHarbourMain extends Application{
-
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		/*try {
 			String system = System.getProperty("os.name");
 			System.out.println(system);
@@ -23,8 +25,8 @@ public class TIHarbourMain extends Application{
 
 		System.out.println("Hello World");
 		*/
-        launch(args);
-
+        //launch(args);
+		ReadInputFile.printVrachtwagenInhoud(new File("C:\\Users\\Olaf\\Desktop\\TIHarbour\\TIHarbour\\Rescources\\input.txt"));
 	}
 
 	@Override
@@ -36,6 +38,7 @@ public class TIHarbourMain extends Application{
         stage.setTitle("THIS IS A TEST");
 		return;
 	}
+
 	
 	
 
